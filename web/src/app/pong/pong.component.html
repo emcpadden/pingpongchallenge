@@ -1,0 +1,20 @@
+<h1>
+  PONG
+</h1>
+
+<p>
+  Last Action: {{lastAction?.type}}
+  allow pong: {{allowPong()}}
+</p>
+
+<div>
+  <button (click)=refesh()>Refresh</button>
+</div>
+
+<div *ngIf="!allowPong()">
+  PONG NOT ALLOWED, YOU MUST PING FIRST
+</div>
+
+<div *ngIf="allowPong()">
+  <button (click)="pong()">PONG</button>
+</div>
